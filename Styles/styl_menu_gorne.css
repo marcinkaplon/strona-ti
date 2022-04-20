@@ -1,0 +1,98 @@
+.logo{
+	background-color: var(--purple2);
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	width:100%;
+	left:0px;
+	right: 0px;
+	top:0px;
+	z-index: 2;
+}
+
+.logo .nav-top{
+	margin-right: 20px;
+}
+
+@keyframes logo_enters {
+  0%   {color:rgba(0,0,0,0.1); right:100px; opacity: 0.1; }
+  50% 	{opacity: 0.5;}
+  100% {color:white; right:0px; opacity: 1;}
+}
+
+.logo p{
+	margin-left: 20px;
+	font-weight: bold;
+	animation-name: logo_enters;
+	animation-duration: 1s;	
+}
+
+.logo p:hover{
+	transform: rotate(360deg);
+	transition: transform 1s;
+}
+
+.logo img{
+	height:65px;
+	margin-left: 20px;
+	animation-name: logo_enters;
+	animation-duration: 1s;
+	position: relative;
+}
+.logo img:hover{
+	transform: rotate(360deg);
+	transition: transform 1s;
+}
+
+.logo a{
+	background-color: var(--light);
+	padding:5px;
+	color: #1D1E2B;
+	font-weight: bold;
+}
+
+.logo a:hover{
+	background-color: white;
+}
+
+.logo a:focus{
+	color:black;
+}
+
+@media screen and (max-width: 600px) {
+
+	.button{
+		display:none;
+	}
+	.container{
+		font-size: 12pt;
+	}
+	.container-main{
+		margin:0px;
+	}
+	footer{
+		width:100%;
+	}
+
+}
+
+@media screen and (min-width: 850px)
+{
+	.logo img{
+		display: none;
+	}
+	.logo p{
+		position: relative;
+	}
+}
+
+@media screen and (max-width: 850px)
+{
+	.logo p{
+		display: none;
+	}
+	
+}
+
